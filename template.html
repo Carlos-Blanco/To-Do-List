@@ -1,14 +1,13 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
   <head>
     <meta charset="utf-8">
-    <title>TO-DO-LIST</title>
+    <title>Flat UI</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <!-- Loading Bootstrap -->
     <link href="bootstrap/css/bootstrap.css" rel="stylesheet">
     <link href="bootstrap/css/bootstrap-responsive.css" rel="stylesheet">
-    <link href="css/custom.css" rel="stylesheet">
 
     <!-- Loading Flat UI -->
     <link href="css/flat-ui.css" rel="stylesheet">
@@ -20,10 +19,10 @@
       <script src="js/html5shiv.js"></script>
     <![endif]-->
   </head>
-  <body ng-app>
+  <body>
     <div class="container">
       <div ng-controller="TodoCtrl">
-        <h4>Total todos: {{getTotalTodos()}}</h4>
+        <h2>Total todos: {{getTotalTodos()}}</h2>
         <ul>
             <li ng-repeat="todo in todos">
                 <input type="checkbox" ng-model="todo.done">
@@ -32,9 +31,9 @@
         </ul>
         <form>
             <input type="text" ng-model="formTodoText" ng-model-instant>
-            <a href="#" class="btn btn-primary" ng-click="addTodo()">Add</a>
+            <button ng-click="addTodo()">Add</button>
         </form>
-        <a href="#" class="btn btn-danger" ng-click="clearCompleted()">Clear Completed</a>
+        <button ng-click="clearCompleted()">Clear Completed</button>
       </div>
     </div>
     <!-- /.container -->
