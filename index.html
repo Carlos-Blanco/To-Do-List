@@ -8,10 +8,11 @@
     <!-- Loading Bootstrap -->
     <link href="bootstrap/css/bootstrap.css" rel="stylesheet">
     <link href="bootstrap/css/bootstrap-responsive.css" rel="stylesheet">
-    <link href="css/custom.css" rel="stylesheet">
 
     <!-- Loading Flat UI -->
     <link href="css/flat-ui.css" rel="stylesheet">
+    <!-- Load custom style -->
+    <link href="css/custom.css" rel="stylesheet">
 
     <link rel="shortcut icon" href="images/favicon.ico">
 
@@ -23,18 +24,20 @@
   <body ng-app>
     <div class="container">
       <div ng-controller="TodoCtrl">
-        <h4>Total todos: {{getTotalTodos()}}</h4>
+        <h3>Total ToDo's: {{getTotalTodos()}}</h3>
         <ul>
             <li ng-repeat="todo in todos">
-                <input type="checkbox" ng-model="todo.done">
-                <span class="done-{{todo.done}}">{{todo.text}}</span>
+                <label class="checkbox" for="checkbox2">
+                    <input type="checkbox" checked="checked" value="" id="checkbox2" data-toggle="checkbox" ng-model="todo.done">
+                    <span class="done-{{todo.done}}">{{todo.text}}</span>
+                </label>
             </li>
         </ul>
         <form>
             <input type="text" ng-model="formTodoText" ng-model-instant>
-            <a href="#" class="btn btn-primary" ng-click="addTodo()">Add</a>
+            <a class="btn btn-primary" ng-click="addTodo()">Add</a>
         </form>
-        <a href="#" class="btn btn-danger" ng-click="clearCompleted()">Clear Completed</a>
+        <a class="btn btn-danger" ng-click="clearCompleted()">Clear Completed</a>
       </div>
     </div>
     <!-- /.container -->

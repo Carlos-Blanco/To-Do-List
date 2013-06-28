@@ -1,4 +1,23 @@
+body {
+	background-color: #2c3e50;
+}
+li {
+	list-style: none;
+}
+input {
+	margin-top: 10px;
+}
+.container {
+	background-color: #fff;
+	border-radius: 5px;
+	width: 260px;
+	padding: 40px;
+	margin-top: 50px;
+}
 .done-true {
 	text-decoration: line-through;
 	color: gray;
+}
+.btn-danger {
+	width: 235px;
 }
