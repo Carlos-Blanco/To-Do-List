@@ -5,6 +5,14 @@ function TodoCtrl($scope) {
 		return $scope.todos.length;
 	};
 
+	$scope.getUndoneTodos = function(){
+		count = 0;
+		angular.forEach($scope.todos, function(task){
+			count += task.done ? 0 : 1;
+		});
+		return count;
+	}
+
 	$scope.addTodo = function(){
 		$scope.todos.push({text:$scope.formTodoText, done:false });
 		$scope.formTodoText = '';
