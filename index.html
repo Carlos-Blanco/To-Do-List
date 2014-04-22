@@ -24,11 +24,12 @@
   <body ng-app>
     <div class="container">
       <div ng-controller="TodoCtrl">
-        <h3>Total ToDo's: {{getTotalTodos()}}</h3>
+        <h4>My TODO list</h4>
+        <p>{{getUndoneTodos()}} tareas pendientes de {{getTotalTodos()}}</p>
         <ul>
             <li ng-repeat="todo in todos">
                 <label class="checkbox" for="checkbox2">
-                    <input type="checkbox" checked="checked" value="" id="checkbox2" data-toggle="checkbox" ng-model="todo.done">
+                    <input type="checkbox" id="checkbox2" ng-model="todo.done">
                     <span class="done-{{todo.done}}">{{todo.text}}</span>
                 </label>
             </li>
