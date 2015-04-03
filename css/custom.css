@@ -10,9 +10,9 @@ input {
 .container {
 	background-color: #fff;
 	border-radius: 5px;
-	width: 260px;
-	padding: 40px;
 	margin-top: 50px;
+	padding: 40px;
+	width: 260px;
 }
 .done-true {
 	text-decoration: line-through;

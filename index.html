@@ -28,10 +28,8 @@
         <p>{{getUndoneTodos()}} tareas pendientes de {{getTotalTodos()}}</p>
         <ul>
             <li ng-repeat="todo in todos">
-                <label class="checkbox" for="checkbox2">
-                    <input type="checkbox" id="checkbox2" ng-model="todo.done">
-                    <span class="done-{{todo.done}}">{{todo.text}}</span>
-                </label>
+                <input type="checkbox" ng-model="todo.done">
+                <span class="done-{{todo.done}}">{{todo.text}}</span>
             </li>
         </ul>
         <form>
